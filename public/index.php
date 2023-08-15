@@ -5,24 +5,30 @@
 
 <?php
     $movieProvider = new MovieProvider();
-    $movies = $movieProvider->get($rows = 16);
+    $movies = $movieProvider->get($rows = constant('INDEX_MOVIE_ROWS'));
 ?>
 
-<h1>Movie Recommendations</h1>
+<div class="title">
+    <h1>Movie Recommendations</h1>
+</div>
 
-<form id="search-form" method="get" action="movie.php">
-    <input id="auto-complete" name="title" type="text" placeholder="搜尋電影（英文）"/>
-</form>
+<div>
+    <form id="search-form" method="get" action="movie.php">
+        <input id="auto-complete" name="title" type="text" placeholder="搜尋電影（英文）"/>
+    </form>
+</div>
 
-<table border="1">
-    <tr>
-        <th>Movie</th>
-    </tr>
-    <?php foreach ($movies as $movie): ?>
+<div class="movie-table">
+    <table class="">
         <tr>
-            <td><a href="movie.php?id=<?= $movie['id'] ?>"><?= $movie['title'] ?></a></td>
+            <th>Movie</th>
         </tr>
-    <?php endforeach; ?>
-</table>
+        <?php foreach ($movies as $movie): ?>
+            <tr>
+                <td><a href="movie.php?id=<?= $movie['id'] ?>"><?= $movie['title'] ?></a></td>
+            </tr>
+        <?php endforeach; ?>
+    </table>
+</div>
 
 <?php require_once('../app/includes/footer.php'); ?>

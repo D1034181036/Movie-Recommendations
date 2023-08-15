@@ -5,8 +5,34 @@
 
 #auto-complete {
 	font-size: 22px;
+	width: 320px;
 }
 
 .container {
 	padding: 16px;
+}
+
+.footer {
+	padding: 16px 0;
+}
+
+.title a, .footer a {
+	text-decoration: none;
+}
+
+.title a:visited, .footer a:visited {
+	color: blue;
+}
+
+table, th, td {
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+.movie-table table {
+	width: 360px;
+}
+
+.movie-table td {
+	padding: 5px;
 }
