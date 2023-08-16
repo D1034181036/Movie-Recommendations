@@ -1,38 +1,40 @@
-
 #search-form {
-	padding-bottom: 24px;
+    padding-bottom: 24px;
 }
 
 #auto-complete {
-	font-size: 22px;
-	width: 320px;
+    font-size: 22px;
+    width: 320px;
 }
 
 .container {
-	padding: 16px;
+    padding: 16px;
 }
 
 .footer {
-	padding: 16px 0;
+    padding: 16px 0;
 }
 
-.title a, .footer a {
-	text-decoration: none;
+a {
+    text-decoration: none;
+    color: blue;
 }
 
-.title a:visited, .footer a:visited {
-	color: blue;
-}
-
-.movie-table table, th, td {
-	border: 1px solid black;
-	border-collapse: collapse;
+/* 電影表格相關樣式 */
+.movie-table table, .movie-table th, .movie-table td {
+    border: 1px solid black;
+    border-collapse: collapse;
 }
 
 .movie-table table {
-	width: 360px;
+    width: 360px;
 }
 
 .movie-table td {
-	padding: 5px;
+    padding: 5px;
+}
+
+/* 目標電影樣式 */
+.movie-table .target-movie {
+    border: 2px solid red;
 }

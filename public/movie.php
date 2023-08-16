@@ -21,7 +21,13 @@
 ?>
 
 <div class="title">
-    <h1><a href="index.php">Movie Recommendations</a></h1>
+    <h1><a href="/">Movie Recommendations</a></h1>
+</div>
+
+<div>
+    <form id="search-form" method="get" action="movie.php">
+        <input id="auto-complete" name="title" type="text" placeholder="搜尋電影（英文）"/>
+    </form>
 </div>
 
 <div class="movie-table">
@@ -32,7 +38,8 @@
         </tr>
         <?php if ($movie): ?>
         <tr>
-            <td><a href="https://www.imdb.com/title/tt<?= str_pad($movie['imdb_id'], 7, '0', STR_PAD_LEFT) ?>/" target="_blank"><?= $movie['title'] ?></a></td>
+            <td class="target-movie"><a href="https://www.imdb.com/title/tt<?= str_pad($movie['imdb_id'], 7, '0', STR_PAD_LEFT) ?>/" target="_blank"><?= $movie['title'] ?></a></td>
+            <td></td>
         </tr>
         <?php endif; ?>
         <?php foreach ($recommendations as $movie): ?>
